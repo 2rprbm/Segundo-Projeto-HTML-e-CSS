@@ -1,0 +1,113 @@
+header{
+    background-color: var(--preto-fundo);
+    color: var(--branco-menu);
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+}
+
+.cabecalho__menu--lista{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 33vh; 
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.cabecalho__menu--lista--logo{
+    background-image: url("../img/logo.png");
+    background-position: center;      
+    background-repeat: no-repeat; 
+    box-sizing: border-box;
+    height: 40%;
+    width: 100%;
+}
+
+
+.cabecalho__menu--lista--itens:nth-child(4)::before{
+    content: url("../icons/localizacao.png");
+    padding-right: 7px;
+}
+
+.cabecalho__menu--lista--itens:nth-child(4)::after{
+    content: url("../icons/seta.png");
+    padding-left: 7px;
+}
+
+ .cabecalho__menu--lista--busca{
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+} 
+
+.cabecalho__menu--lista--busca--input{
+    border: 2px solid var(--branco-menu);
+    background-color: transparent;
+    background-image: url("../icons/busca.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    border-radius: 10px;
+    color: var(--branco-menu);
+    font-family: var(--fonte-secundaria);
+    height: 40px;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.cabecalho__menu--lista--busca--input:focus{
+    background-image: none;
+    outline: 0;
+}
+
+@media screen and (min-width: 720px){
+    .cabecalho__menu--lista--logo{
+        width: 112px;
+    }   
+
+    .cabecalho__menu--lista--busca{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+   
+    .cabecalho__menu--lista{
+        height: 136px;
+        padding-top: 0;
+    }
+
+    .cabecalho__menu--lista--itens:nth-child(1){
+        order: 1;
+    }
+
+    .cabecalho__menu--lista--itens:nth-child(2){
+        order: 3;
+    }
+
+    .cabecalho__menu--lista--itens:nth-child(3){
+        order: 4;
+    }
+
+    .cabecalho__menu--lista--itens:nth-child(4){
+        order: 5;
+    }
+
+    .cabecalho__menu--lista--itens:nth-child(5){
+        order: 2;
+    }
+
+    .cabecalho__menu--lista--logo{
+        height: 112px;
+    }
+
+    .cabecalho__menu--lista--busca{
+        width: 33vw;
+    } 
+    
+    .cabecalho__menu--lista--busca--input{
+        height: 50px;
+        width: 100%;
+    }
+
+}
